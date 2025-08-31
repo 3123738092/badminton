@@ -10,18 +10,28 @@ The complete implementation code for each model is available in the repository, 
 
 ## Datasets Used
 
-### abd
-We create our own datasets with the equipment from the AI lab, we adopted the APX EVB Gen2 camera in the data collection. The datasets contain various camera stands from close-up, mid-shot to long-shot, and different angles of shooting which may be enough for the badminton scenario evaluation used. The details of shooting can be found in 羽毛球事件相机运动去模糊数据集拍摄脚本.docx. 
+### Data Collection
+We constructed a dedicated badminton motion dataset using equipment from the AI Lab, specifically utilizing the APX EVB Gen2 event camera. The dataset includes:
+-Multiple camera positions (close-up, mid-shot, long-shot)
+-Various shooting angles covering typical badminton court scenarios
+-Comprehensive motion patterns including fast shuttlecock trajectories and player movements.
+Detailed specifications of the data collection process are documented in "羽毛球事件相机运动去模糊数据集拍摄脚本.docx".
 
-What's more, the output of APX EVB Gen2 camera are all binary datatype, which is not suitable for model. So we transformed those data which originally are binary format into required PNG or Npz format, then feed them to 3 model, from TimelensXL, CBMNet, to HR-INR and examine their output. 
-The needed data directory structure should be like this:
+### Data Format
+The raw output from the APX EVB Gen2 camera is in binary format, which requires preprocessing for model compatibility. We converted the binary data into PNG (for intensity frames) and NPZ (for event data) formats, which are compatible with all three models evaluated in this work.
+
+The required directory structure is as follows
 
 ![Timestamps](./asset/8.png)
 
-The timestamps.txt should include the timestamps of each png.
+Note: The timestamps.txt file must contain corresponding timestamps for each PNG frame
 
-## Event processing
-As mentioned before, the output of camera is binary datatype, so we used the event_preprocessing_v2.ipynb to transform the data. The provided code can read the provided raw image and timestamps information and combine them into array datatype. 
+### Event Data Preprocessing
+To handle the raw binary output from the event camera, we provide event_preprocessing_v2.ipynb - a Jupyter notebook that:
+-Reads raw image data and timestamp information
+-Converts binary event data into array format
+-Performs necessary normalization and alignment
+-Generates compatible input files for all evaluated models
 
 ## Pretrained Model
 The pretrained model of HR-INR corresponds to the parameter setting : epr_encoder_name: swin
