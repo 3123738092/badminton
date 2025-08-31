@@ -10,24 +10,7 @@ We create our own datasets with the equipment from the AI lab, we adopted the AP
 What's more, the output of APX EVB Gen2 camera are all binary datatype, which is not suitable for model. So we transformed those data which originally are binary format into required PNG or Npz format, then feed them to 3 model, from TimelensXL, CBMNet, to HR-INR and examine their output. 
 The needed data directory structure should be like this:
 
-D:.
-├─scene1
-│  ├─events_aligned
-│  │       ├─ event0.npz
-│  │       ├─ ...
-│  │       └─ eventn-1.npz
-│  └─new
-│    ├─ p0.png
-│    ├─ ...
-│    ├─ pn.png
-│    └─ timestamps.txt
-│           ├─ ts_0
-│           ├─ ...
-│           └─ ts_n
-│   
-└─scene2
-    ├─events_align
-    └─images_corrected
+![Timestamps](./asset/8.png)
 
 The timestamps.txt should include the timestamps of each png.
 
