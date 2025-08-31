@@ -28,24 +28,7 @@ D:.
 └─scene2
     ├─events_align
     └─images_corrected
-D:.
-├─scene1
-│ ├─events_aligned
-│ │ ├─ event0.npz
-│ │ ├─ ...
-│ │ └─ eventn-1.npz
-│ └─new
-│ ├─ p0.png
-│ ├─ ...
-│ ├─ pn.png
-│ └─ timestamps.txt
-│ ├─ ts_0
-│ ├─ ...
-│ └─ ts_n
-│
-└─scene2
-├─events_align
-└─images_corrected
+
 The timestamps.txt should include the timestamps of each png.
 
 ## Event processing
