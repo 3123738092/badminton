@@ -8,6 +8,31 @@ In our work, we implemented the code of HR-INR, CBMNet and Timelens-XL. You can 
 We create our own datasets with the equipment from the AI lab, we adopted the APX EVB Gen2 camera in the data collection. The datasets contain various camera stands from close-up, mid-shot to long-shot, and different angles of shooting which may be enough for the badminton scenario evaluation used. The details of shooting can be found in 羽毛球事件相机运动去模糊数据集拍摄脚本.docx. 
 
 What's more, the output of APX EVB Gen2 camera are all binary datatype, which is not suitable for model. So we transformed those data which originally are binary format into required PNG or Npz format, then feed them to 3 model, from TimelensXL, CBMNet, to HR-INR and examine their output. 
+The needed data directory structure should be like this:
+
+D:.
+├─scene1
+│  ├─events_aligned
+│  │       ├─ event0.npz
+│  │       ├─ ...
+│  │       └─ eventn-1.npz
+│  └─new
+│    ├─ p0.png
+│    ├─ ...
+│    ├─ pn.png
+│    └─ timestamps.txt
+│           ├─ ts_0
+│           ├─ ...
+│           └─ ts_n
+│   
+└─scene2
+    ├─events_align
+    └─images_corrected
+
+The timestamps.txt should include the timestamps of each png.
+
+## Event processing
+As mentioned before, the output of camera is binary datatype, so we used the event_preprocessing_v2.ipynb to transform the data. The provided code can read the  
 
 ## Pretrained Model
 The pretrained model of HR-INR corresponds to the parameter setting : epr_encoder_name: swin
