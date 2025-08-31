@@ -2,7 +2,7 @@
 This is a readme of the xprogram project "High-Speed Motion Analysis in Badminton via Event Camera", we mainly adopt the HR-INR, Timelens-XL and CBMNet model to our dataset and compare their performance on our dataset. You may see the code and visual result in the later part.
 
 ## Methods Used
-We have reimplemented three state-of-the-art models for comparison:
+We have reimplemented three state-of-the-art models for comparison:  
 -HR-INR (High-Resolution Implicit Neural Representation)
 -CBMNet 
 -Timelens-XL
