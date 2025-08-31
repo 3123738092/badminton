@@ -13,7 +13,10 @@ The complete implementation code for each model is available in the repository, 
 ## Datasets Used
 
 ### Data Collection
-We constructed a dedicated badminton motion dataset using equipment from the AI Lab, specifically utilizing the APX EVB Gen2 event camera. The dataset includes:  
+We constructed a dedicated badminton motion dataset using equipment from the AI Lab, specifically utilizing the APX EVB Gen2 event camera.  
+![Event Camera](./asset/9.png)
+
+The dataset includes:  
 
 **-Multiple camera positions (close-up, mid-shot, long-shot)**  
 **-Various shooting angles covering typical badminton court scenarios**  
