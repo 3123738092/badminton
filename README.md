@@ -11,6 +11,7 @@ We create our own datasets with the equipment from the AI lab, we adopted the AP
 We found out the performance of TimelensXL, CBMNet is not that qualified and have the serious problem of discontinuity which may result from the assumption of linear motion. These two model adopt the optical flow to estimate the motion and suffer from those highly dynamic scenarios or non-linear motion scenarios. 
 
 This situation is much more relieved in the output of HR-INR. Its motion prediction logic leverages the high temporal resolution of event cameras, hierarchical temporal representation, and implicit neural embedding, completely abandoning the traditional optical flow-based "displacement vector calculation" paradigm.
-![output of different models](./assets/1.png)
+![output of different models](./asset/1.png)
+
 ## Video Supplementary Materials
 For a better understanding of our method and its performance, we provide visualizations of the results on various datasets. The following figures demonstrate the output of different approach, and provides the visualizable regional-features graph, holistic-feature graph, etc. For the videos, you can check this [link](https://hkustgz-my.sharepoint.com/:f:/g/personal/hqiang669_connect_hkust-gz_edu_cn/Evc6sNnP3CZJhSBra2MQRvcBWi-LfGeAANHdEVlavnVJUg?e=kld4pS).
