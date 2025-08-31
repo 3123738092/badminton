@@ -6,6 +6,7 @@ We have reimplemented three state-of-the-art models for comparison:
 -HR-INR (High-Resolution Implicit Neural Representation)  
 -CBMNet  
 -Timelens-XL  
+
 The complete implementation code for each model is available in the repository, along with configuration files and training scripts.art.
 
 ## Datasets Used
@@ -15,6 +16,7 @@ We constructed a dedicated badminton motion dataset using equipment from the AI 
 -Multiple camera positions (close-up, mid-shot, long-shot)  
 -Various shooting angles covering typical badminton court scenarios  
 -Comprehensive motion patterns including fast shuttlecock trajectories and player movements.  
+
 Detailed specifications of the data collection process are documented in "羽毛球事件相机运动去模糊数据集拍摄脚本.docx".
 
 ### Data Format
@@ -31,7 +33,8 @@ To handle the raw binary output from the event camera, we provide event_preproce
 -Reads raw image data and timestamp information  
 -Converts binary event data into array format  
 -Performs necessary normalization and alignment  
--Generates compatible input files for all evaluated models
+-Generates compatible input files for all evaluated models  
+
 
 ## Pretrained Model
 The pretrained model of HR-INR corresponds to the parameter setting : epr_encoder_name: swin
