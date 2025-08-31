@@ -14,7 +14,7 @@ The complete implementation code for each model is available in the repository, 
 
 ### Data Collection
 We constructed a dedicated badminton motion dataset using equipment from the AI Lab, specifically utilizing the APX EVB Gen2 event camera.  
-![Event Camera](./asset/9.png)
+![Event Camera](./asset/10.png)
 
 The dataset includes:  
 
