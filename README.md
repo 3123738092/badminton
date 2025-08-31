@@ -2,9 +2,15 @@
 This is a readme of the xprogram project "High-Speed Motion Analysis in Badminton via Event Camera", we mainly adopt the HR-INR, Timelens-XL and CBMNet model to our dataset and compare their performance on our dataset. You may see the code and visual result in the later part.
 
 ## Methods Used
-In our work, we implemented the code of HR-INR, CBMNet and Timelens-XL. You can see the corresponding code in the repository. The used pretrained model can be found in the later part.
+We have reimplemented three state-of-the-art models for comparison:
+  HR-INR (High-Resolution Implicit Neural Representation)
+  CBMNet (Convolutional Blur Modeling Network)
+  Timelens-XL
+The complete implementation code for each model is available in the repository, along with configuration files and training scripts.art.
 
 ## Datasets Used
+
+### 1
 We create our own datasets with the equipment from the AI lab, we adopted the APX EVB Gen2 camera in the data collection. The datasets contain various camera stands from close-up, mid-shot to long-shot, and different angles of shooting which may be enough for the badminton scenario evaluation used. The details of shooting can be found in 羽毛球事件相机运动去模糊数据集拍摄脚本.docx. 
 
 What's more, the output of APX EVB Gen2 camera are all binary datatype, which is not suitable for model. So we transformed those data which originally are binary format into required PNG or Npz format, then feed them to 3 model, from TimelensXL, CBMNet, to HR-INR and examine their output. 
@@ -15,7 +21,7 @@ The needed data directory structure should be like this:
 The timestamps.txt should include the timestamps of each png.
 
 ## Event processing
-As mentioned before, the output of camera is binary datatype, so we used the event_preprocessing_v2.ipynb to transform the data. The provided code can read the  
+As mentioned before, the output of camera is binary datatype, so we used the event_preprocessing_v2.ipynb to transform the data. The provided code can read the provided raw image and timestamps information and combine them into array datatype. 
 
 ## Pretrained Model
 The pretrained model of HR-INR corresponds to the parameter setting : epr_encoder_name: swin
@@ -30,8 +36,9 @@ This situation is much more relieved in the output of HR-INR. Its motion predict
 
 We have adopted those model on 4 different angles or shooting distance.
 ## Intermediate visualization
-We can also see this intermediate output from HR-INR for a better understanding of our model.
+For deeper insight into HR-INR's performance, we provide intermediate output visualizations:
 ![The intermediate figure](./asset/6.png)
+These visualizations illustrate the model's internal processing of motion information, including regional and holistic feature representations.
 
 ## Video Supplementary Materials
 For a better understanding of our method and its performance, we provide visualizations of the results on various datasets. The following figures demonstrate the output of different approach, and provides the visualizable regional-features graph, holistic-feature graph, etc. For the videos, you can check this [link](https://hkustgz-my.sharepoint.com/:f:/g/personal/hqiang669_connect_hkust-gz_edu_cn/Evc6sNnP3CZJhSBra2MQRvcBWi-LfGeAANHdEVlavnVJUg?e=kld4pS).
