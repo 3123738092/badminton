@@ -20,6 +20,7 @@ We found out the performance of TimelensXL, CBMNet is not that qualified and hav
 This situation is much more relieved in the output of HR-INR. Its motion prediction logic leverages the high temporal resolution of event cameras, hierarchical temporal representation, and implicit neural embedding, completely abandoning the traditional optical flow-based "displacement vector calculation" paradigm.
 ![output of different models](./asset/1.png)
 
+We have adopted those model on 4 different angles or shooting distance.
 ## Intermediate visualization
 We can also see this intermediate output from HR-INR for a better understanding of our model.
 ![The intermediate figure](./asset/6.png)
