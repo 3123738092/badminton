@@ -3,9 +3,10 @@ This is a readme of the xprogram project "High-Speed Motion Analysis in Badminto
 
 ## Methods Used
 We have reimplemented three state-of-the-art models for comparison:  
--HR-INR (High-Resolution Implicit Neural Representation)  
--CBMNet  
--Timelens-XL  
+
+**-HR-INR (High-Resolution Implicit Neural Representation)**  
+**-CBMNet**  
+**-Timelens-XL**  
 
 The complete implementation code for each model is available in the repository, along with configuration files and training scripts.art.
 
@@ -13,11 +14,12 @@ The complete implementation code for each model is available in the repository, 
 
 ### Data Collection
 We constructed a dedicated badminton motion dataset using equipment from the AI Lab, specifically utilizing the APX EVB Gen2 event camera. The dataset includes:  
--Multiple camera positions (close-up, mid-shot, long-shot)  
--Various shooting angles covering typical badminton court scenarios  
--Comprehensive motion patterns including fast shuttlecock trajectories and player movements.  
 
-Detailed specifications of the data collection process are documented in "羽毛球事件相机运动去模糊数据集拍摄脚本.docx".
+**-Multiple camera positions (close-up, mid-shot, long-shot)**  
+**-Various shooting angles covering typical badminton court scenarios**  
+**-Comprehensive motion patterns including fast shuttlecock trajectories and player movements.**  
+
+*Detailed specifications of the data collection process are documented in "羽毛球事件相机运动去模糊数据集拍摄脚本.docx".*
 
 ### Data Format
 The raw output from the APX EVB Gen2 camera is in binary format, which requires preprocessing for model compatibility. We converted the binary data into PNG (for intensity frames) and NPZ (for event data) formats, which are compatible with all three models evaluated in this work.
@@ -26,14 +28,15 @@ The required directory structure is as follows
 
 ![Timestamps](./asset/8.png)
 
-Note: The timestamps.txt file must contain corresponding timestamps for each PNG frame
+*Note: The timestamps.txt file must contain corresponding timestamps for each PNG frame*
 
 ### Event Data Preprocessing
 To handle the raw binary output from the event camera, we provide event_preprocessing_v2.ipynb - a Jupyter notebook that:  
--Reads raw image data and timestamp information  
--Converts binary event data into array format  
--Performs necessary normalization and alignment  
--Generates compatible input files for all evaluated models  
+
+**-Reads raw image data and timestamp information**  
+**-Converts binary event data into array format**  
+**-Performs necessary normalization and alignment**  
+**-Generates compatible input files for all evaluated models**  
 
 
 ## Pretrained Model
