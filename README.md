@@ -8,7 +8,7 @@ We have reimplemented three state-of-the-art models for comparison:
 **-CBMNet**  
 **-Timelens-XL**  
 
-The complete implementation code for each model is available in the repository, along with configuration files and training scripts.art.
+The detaileld implementation code for HR-INR model is available in the repository, along with configuration files and training scripts.art. For the code of Timelens-XL, please refer to [Timelens-XL](https://github.com/OpenImagingLab/TimeLens-XL). For the code of CBMNet, please refer to [CBMNet](https://github.com/intelpro/CBMNet)
 
 ## Datasets Used
 
