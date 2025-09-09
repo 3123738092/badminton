@@ -43,9 +43,7 @@ To handle the raw binary output from the event camera, we provide event_preproce
 
 
 ## Pretrained Model
-The pretrained model of HR-INR corresponds to the parameter setting : epr_encoder_name: swin
-
-Those model can be found in [link]()
+The pretrained model of HR-INR corresponds to the parameter setting : epr_encoder_name: swin.
 
 ## Result
 We found out the performance of TimelensXL, CBMNet is not that qualified and have the serious problem of discontinuity which may result from the assumption of linear motion. These two model adopt the optical flow to estimate the motion and suffer from those highly dynamic scenarios or non-linear motion scenarios. 
